@@ -1,0 +1,19 @@
+
+  "name": "weekly-scheduler-server",
+  "version": "1.0.0",
+  "description": "Weekly task scheduler with iOS web push notifications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "generate-keys": "node -e \"const wp=require('web-push');const k=wp.generateVAPIDKeys();console.log('VAPID_PUBLIC='+k.publicKey+'\\nVAPID_PRIVATE='+k.privateKey);\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-cron": "^3.0.3",
+    "web-push": "^3.6.7"
+  }
+}
